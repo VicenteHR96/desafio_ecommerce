@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  grid-area: cabecera;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-header {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-header img {
+  height: 3.7rem;
+}
+
+menu {
+  grid-area: nav;
+  color: black;
+  padding-top: 2rem;
+  font-size: small;
+}
+
+.contenido-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 3rem;
+  cursor: default;
+}
+
+.contenido-menu h2 {
+  padding: 0 0 1.5rem 0;
+}
+
+.contenido-menu ul li {
+  padding-bottom: 1rem;
+  list-style: none;
+}
+
+.contenido-menu ul li:hover {
+  cursor: pointer;
+  color: green;
+}
+
+.q-productos {
+  color: #999;
+}
+
+main {
+  grid-area: principal;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.grid-items {
+  box-shadow: 0 0 8px #4f4f4f4d;
+  border-radius: 5px;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  transition: all 400ms ease;
+  cursor: default;
+}
+
+.grid-items:hover {
+  transform: translateY(-3%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.img-item {
+  display: block;
+  object-fit: cover;
+  height: 15rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.bg-item1 {
+  background-image: url(../imgs/caminito.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-item2 {
+  background-image: url(../imgs/bombonera.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-item3 {
+  background-image: url(../imgs/el-querandi.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-item4 {
+  background-image: url(../imgs/uptown.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem 0 0.5rem 0;
+  width: 100%;
+  border: none;
+  box-shadow: 0 0 8px #4f4f4f4d;
+  background-color: green;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+footer {
+  grid-area: piecera;
+  background-color: rgba(0, 0, 0, 0.708);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "cabecera cabecera"
+    "nav principal"
+    "piecera piecera";
+  grid-template-rows: 4fr 55fr 3fr;
+  grid-template-columns: 1fr 6fr;
+  background-image: url(../imgs/bg-main.jpg);
+  background-size: cover;
+}
